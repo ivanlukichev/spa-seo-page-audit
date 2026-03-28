@@ -1,18 +1,22 @@
-Load this folder directly in Chrome/Edge as an unpacked extension:
+Load this folder directly in Chrome as an unpacked extension:
 
 1. Open chrome://extensions
 2. Enable Developer mode
 3. Click Load unpacked
-4. Select this folder: unpacked-extension
+4. Select this folder: extension/chrome
 
-This version is self-contained and does not require npm, vite, or a build step.
+This build is self-contained and does not require npm, vite, or a build step.
 
-What is included now:
+Included in this browser build:
 
 - Compact popup mode for quick overview
 - Full page audit mode opened from popup via "Open Full View"
 - Centralized background store keyed by tabId
 - Re-analyze support from popup and full page
+
+Store materials:
+
+- See STORE_DESCRIPTION.md for Chrome Web Store listing copy
 
 Project links:
 

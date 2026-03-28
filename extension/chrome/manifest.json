@@ -36,10 +36,5 @@
       "js": ["content.js"],
       "run_at": "document_idle"
     }
-  ],
-  "browser_specific_settings": {
-    "gecko": {
-      "id": "onpage-seo-inspector@example.local"
-    }
-  }
+  ]
 }

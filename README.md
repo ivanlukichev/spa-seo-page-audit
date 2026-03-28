@@ -42,23 +42,26 @@ It works entirely in the browser, reads the live DOM, and does not use Ahrefs, S
 ## Repository Layout
 
 ```text
+extension/            Browser-ready builds by store/browser
 src/                  Source TypeScript app scaffold
 public/               Source public assets
-unpacked-extension/   Self-contained browser-loadable build
 README.md
 PRIVACY.md
 LICENSE
 ```
 
-## Current Working Version
+## Browser Builds
 
-The folder to load directly into Chrome / Edge is:
+Ready-to-load extension folders:
 
 ```text
-unpacked-extension/
+extension/chrome
+extension/edge
+extension/opera
+extension/firefox
 ```
 
-This folder is self-contained and does not require `npm`, `vite`, or a build step in its current form.
+Each of these folders is self-contained and does not require `npm`, `vite`, or a build step in its current form.
 
 ## Load As Unpacked Extension
 
@@ -67,7 +70,14 @@ This folder is self-contained and does not require `npm`, `vite`, or a build ste
 1. Open `chrome://extensions` or `edge://extensions`
 2. Enable `Developer mode`
 3. Click `Load unpacked`
-4. Select the `unpacked-extension/` folder
+4. Select `extension/chrome` for Chrome or `extension/edge` for Edge
+
+### Opera
+
+1. Open `opera://extensions`
+2. Enable `Developer mode`
+3. Click `Load unpacked`
+4. Select `extension/opera`
 
 ### Firefox
 
@@ -75,7 +85,7 @@ Manifest V3 support is still evolving, so Firefox support is best-effort.
 
 1. Open `about:debugging#/runtime/this-firefox`
 2. Click `Load Temporary Add-on`
-3. Select `unpacked-extension/manifest.json`
+3. Select `extension/firefox/manifest.json`
 
 ## Local Development Source
 
