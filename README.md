@@ -1,5 +1,7 @@
 # SPA: SEO Page Audit
 
+![SPA: SEO Page Audit banner](./extension/readme-banner.png)
+
 Browser extension for fast local on-page SEO analysis.
 
 This repository contains browser-ready extension builds only.
