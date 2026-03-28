@@ -1,5 +1,7 @@
 # SPA: SEO Page Audit
 
+![SPA: SEO Page Audit banner](./assets/readme-banner.png)
+
 Local browser extension for fast on-page SEO analysis of the current page.
 
 It works entirely in the browser, reads the live DOM, and does not use Ahrefs, Semrush, Moz, Search Console, or other third-party SEO APIs.
