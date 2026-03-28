@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "On-Page SEO Inspector",
+  "description": "Fast local on-page SEO analysis for the current page.",
+  "version": "0.1.0",
+  "action": {
+    "default_title": "On-Page SEO Inspector",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "permissions": ["activeTab", "tabs"],
+  "host_permissions": ["http://*/*", "https://*/*"],
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "onpage-seo-inspector@example.local"
+    }
+  }
+}
