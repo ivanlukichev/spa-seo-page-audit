@@ -11,7 +11,6 @@
     "128": "icons/icon-128.png"
   },
   "permissions": ["activeTab", "tabs", "storage", "scripting"],
-  "host_permissions": ["http://*/*", "https://*/*"],
   "action": {
     "default_title": "SPA: SEO Page Audit",
     "default_popup": "popup.html",

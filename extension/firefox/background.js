@@ -183,6 +183,15 @@ importScripts("shared.js");
     return getTab(tabId).then(function (tab) {
       const currentUrl = tab && tab.url ? tab.url : "";
 
+      if (!currentUrl) {
+        return {
+          ok: false,
+          state: "error",
+          tabId: tabId,
+          error: SEOShared.getActiveTabAccessMessage()
+        };
+      }
+
       if (SEOShared.isRestrictedPage(currentUrl)) {
         return {
           ok: false,
@@ -223,7 +232,7 @@ importScripts("shared.js");
             ok: false,
             state: "error",
             tabId: tabId,
-            error: error && error.message ? error.message : "Unable to reach the current tab."
+            error: SEOShared.getInjectionErrorMessage(error)
           };
         });
     }).catch(function (error) {
@@ -241,6 +250,15 @@ importScripts("shared.js");
       const tab = values[0];
       const stored = values[1];
       const currentUrl = tab && tab.url ? tab.url : "";
+
+      if (!currentUrl) {
+        return {
+          ok: false,
+          state: "error",
+          tabId: tabId,
+          error: SEOShared.getActiveTabAccessMessage()
+        };
+      }
 
       if (SEOShared.isRestrictedPage(currentUrl)) {
         return {

@@ -38,10 +38,10 @@ What it does not do:
 
 ## Permissions Rationale
 
-- `activeTab`: analyze the current page
+- `activeTab`: temporary access to analyze the current page after explicit user action
+- `scripting`: inject the local analysis script only when needed
 - `tabs`: open the full audit tab and track the analyzed tab
 - `storage`: keep the latest local analysis state
-- `http/https host permissions`: inspect on-page DOM signals
 
 ## Support Links
 

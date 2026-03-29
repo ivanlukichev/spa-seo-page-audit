@@ -209,6 +209,27 @@
     return "This page cannot be analyzed due to browser security restrictions.";
   }
 
+  function getActiveTabAccessMessage() {
+    return "Open the extension from the page you want to analyze to grant temporary tab access.";
+  }
+
+  function getInjectionErrorMessage(error) {
+    const raw = String(error && error.message ? error.message : error || "").toLowerCase();
+
+    if (
+      raw.indexOf("cannot access contents of url") !== -1 ||
+      raw.indexOf("missing host permission") !== -1 ||
+      raw.indexOf("permission denied") !== -1 ||
+      raw.indexOf("the extensions gallery cannot be scripted") !== -1 ||
+      raw.indexOf("cannot access a chrome") !== -1 ||
+      raw.indexOf("cannot access this page") !== -1
+    ) {
+      return getActiveTabAccessMessage();
+    }
+
+    return error && error.message ? error.message : "Unable to reach the current tab.";
+  }
+
   function buildStoredAnalysis(tabId, url, analysis) {
     return {
       tabId: tabId,
@@ -523,6 +544,8 @@
     scoreAnalysis: scoreAnalysis,
     isRestrictedPage: isRestrictedPage,
     getRestrictedPageMessage: getRestrictedPageMessage,
+    getActiveTabAccessMessage: getActiveTabAccessMessage,
+    getInjectionErrorMessage: getInjectionErrorMessage,
     buildStoredAnalysis: buildStoredAnalysis
   };
 })(typeof globalThis !== "undefined" ? globalThis : this);
