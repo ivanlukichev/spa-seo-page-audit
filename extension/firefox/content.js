@@ -1,4 +1,9 @@
 (function () {
+  if (globalThis.__SPA_SEO_PAGE_AUDIT_CONTENT_READY__) {
+    return;
+  }
+
+  globalThis.__SPA_SEO_PAGE_AUDIT_CONTENT_READY__ = true;
   const runtime = typeof browser !== "undefined" ? browser.runtime : chrome.runtime;
   const STOP_WORDS = new Set([
     "a", "an", "and", "are", "as", "at", "be", "but", "by", "for", "from", "has", "have", "how",

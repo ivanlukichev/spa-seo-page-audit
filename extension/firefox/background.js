@@ -110,6 +110,75 @@ importScripts("shared.js");
     }
   }
 
+  function executeScript(tabId, files) {
+    return new Promise(function (resolve, reject) {
+      if (!api.scripting || typeof api.scripting.executeScript !== "function") {
+        reject(new Error("The scripting API is not available in this browser."));
+        return;
+      }
+
+      const details = {
+        target: { tabId: tabId },
+        files: files
+      };
+
+      try {
+        let settled = false;
+        const finishResolve = function (value) {
+          if (settled) {
+            return;
+          }
+
+          settled = true;
+          resolve(value);
+        };
+        const finishReject = function (error) {
+          if (settled) {
+            return;
+          }
+
+          settled = true;
+          reject(error instanceof Error ? error : new Error(String(error)));
+        };
+        const maybePromise = api.scripting.executeScript(details, function (result) {
+          const runtimeError = SEOShared.getRuntimeError();
+          if (runtimeError) {
+            finishReject(new Error(runtimeError.message));
+            return;
+          }
+
+          finishResolve(result || []);
+        });
+
+        if (maybePromise && typeof maybePromise.then === "function") {
+          maybePromise.then(finishResolve).catch(finishReject);
+        }
+      } catch (error) {
+        reject(error instanceof Error ? error : new Error(String(error)));
+      }
+    });
+  }
+
+  function sendTabMessage(tabId, message) {
+    return new Promise(function (resolve, reject) {
+      api.tabs.sendMessage(tabId, message, function (response) {
+        const runtimeError = SEOShared.getRuntimeError();
+        if (runtimeError) {
+          reject(new Error(runtimeError.message));
+          return;
+        }
+
+        resolve(response || null);
+      });
+    });
+  }
+
+  function ensureInjected(tabId) {
+    return executeScript(tabId, ["content.js"]).then(function () {
+      return true;
+    });
+  }
+
   function analyzeTab(tabId) {
     return getTab(tabId).then(function (tab) {
       const currentUrl = tab && tab.url ? tab.url : "";
@@ -123,42 +192,40 @@ importScripts("shared.js");
         };
       }
 
-      return new Promise(function (resolve) {
-        api.tabs.sendMessage(tabId, { type: "SEO_ANALYZE_PAGE" }, function (response) {
-          const runtimeError = SEOShared.getRuntimeError();
-          if (runtimeError) {
-            resolve({
-              ok: false,
-              state: "error",
-              tabId: tabId,
-              error: runtimeError.message || "Unable to reach the current tab."
-            });
-            return;
-          }
-
+      return ensureInjected(tabId)
+        .then(function () {
+          return sendTabMessage(tabId, { type: "SEO_ANALYZE_PAGE" });
+        })
+        .then(function (response) {
           if (!response || !response.ok || !response.analysis) {
-            resolve({
+            return {
               ok: false,
               state: "error",
               tabId: tabId,
               error: (response && response.error) || "Page analysis failed."
-            });
-            return;
+            };
           }
 
           const stored = SEOShared.buildStoredAnalysis(tabId, currentUrl, response.analysis);
-          setStoredAnalysis(tabId, stored).then(function () {
+          return setStoredAnalysis(tabId, stored).then(function () {
             emitAnalysisUpdated(tabId, stored);
-            resolve({
+            return {
               ok: true,
               state: "success",
               tabId: tabId,
               payload: stored,
               fromCache: false
-            });
+            };
           });
+        })
+        .catch(function (error) {
+          return {
+            ok: false,
+            state: "error",
+            tabId: tabId,
+            error: error && error.message ? error.message : "Unable to reach the current tab."
+          };
         });
-      });
     }).catch(function (error) {
       return {
         ok: false,

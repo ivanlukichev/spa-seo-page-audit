@@ -47,7 +47,11 @@
   }
 
   function getApi() {
-    return typeof browser !== "undefined" ? browser : chrome;
+    if (typeof chrome !== "undefined" && chrome.runtime) {
+      return chrome;
+    }
+
+    return browser;
   }
 
   function getRuntimeError() {

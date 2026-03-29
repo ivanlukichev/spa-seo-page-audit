@@ -10,7 +10,7 @@
     "48": "icons/icon-48.png",
     "128": "icons/icon-128.png"
   },
-  "permissions": ["activeTab", "tabs", "storage"],
+  "permissions": ["activeTab", "tabs", "storage", "scripting"],
   "host_permissions": ["http://*/*", "https://*/*"],
   "action": {
     "default_title": "SPA: SEO Page Audit",
@@ -28,13 +28,6 @@
     {
       "resources": ["full.html", "styles.css", "shared.js"],
       "matches": ["<all_urls>"]
-    }
-  ],
-  "content_scripts": [
-    {
-      "matches": ["http://*/*", "https://*/*"],
-      "js": ["content.js"],
-      "run_at": "document_idle"
     }
   ]
 }
