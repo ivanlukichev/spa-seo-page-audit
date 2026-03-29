@@ -190,6 +190,7 @@ pre {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  min-width: 0;
 }
 
 .hero-headline {
@@ -197,6 +198,7 @@ pre {
   flex-wrap: wrap;
   align-items: center;
   gap: 8px;
+  min-width: 0;
 }
 
 .hero-topline {
@@ -218,6 +220,11 @@ pre {
   margin: 0;
   color: var(--muted);
   line-height: 1.5;
+}
+
+.hero-note {
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .section-scores,
@@ -643,6 +650,17 @@ pre {
 
 .hero-actions {
   justify-content: flex-end;
+  width: 100%;
+  min-width: 0;
+}
+
+.popup-hero .hero-topline {
+  min-width: 0;
+}
+
+.popup-hero .hero-actions .refresh-button,
+.popup-hero .hero-actions .action-button {
+  max-width: 100%;
 }
 
 .image-viewer-backdrop {
