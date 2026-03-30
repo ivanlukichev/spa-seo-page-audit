@@ -1,4 +1,6 @@
-importScripts("shared.js");
+if (typeof importScripts === "function") {
+  importScripts("shared.js");
+}
 
 (function () {
   const api = SEOShared.getApi();
