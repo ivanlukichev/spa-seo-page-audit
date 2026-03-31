@@ -46,9 +46,40 @@ Good on-page SEO helps pages:
 - schema and social metadata
 - page-level score, issues and quick wins
 
-## Store Links
+## Install in Your Browser
 
-We will add the public store URLs here after approval:
+The public store links will appear here after approval.
+
+<table>
+  <tr>
+    <td width="33%" valign="top">
+      <strong>Chrome</strong><br /><br />
+      Chrome Web Store link will appear here after approval.<br /><br />
+      <img alt="Add to Chrome coming soon" src="https://img.shields.io/badge/Add_to_Chrome-Coming_soon-4f7ee8?style=for-the-badge" />
+    </td>
+    <td width="33%" valign="top">
+      <strong>Opera</strong><br /><br />
+      Opera Add-ons link will appear here after approval.<br /><br />
+      <img alt="Add to Opera coming soon" src="https://img.shields.io/badge/Add_to_Opera-Coming_soon-e5e7eb?style=for-the-badge&labelColor=f8fafc&color=f8fafc&logoColor=1f2937" />
+    </td>
+    <td width="33%" valign="top">
+      <strong>Firefox</strong><br /><br />
+      Firefox Add-ons link will appear here after approval.<br /><br />
+      <img alt="Add to Firefox coming soon" src="https://img.shields.io/badge/Add_to_Firefox-Coming_soon-4f7ee8?style=for-the-badge" />
+    </td>
+  </tr>
+  <tr>
+    <td width="33%" valign="top">
+      <strong>Edge</strong><br /><br />
+      Microsoft Edge Add-ons link will appear here after approval.<br /><br />
+      <img alt="Add to Edge coming soon" src="https://img.shields.io/badge/Add_to_Edge-Coming_soon-e5e7eb?style=for-the-badge&labelColor=f8fafc&color=f8fafc&logoColor=1f2937" />
+    </td>
+    <td width="33%" valign="top"></td>
+    <td width="33%" valign="top"></td>
+  </tr>
+</table>
+
+Future store URLs:
 
 - Chrome Web Store: coming soon
 - Microsoft Edge Add-ons: coming soon
