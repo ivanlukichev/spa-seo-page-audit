@@ -22,6 +22,7 @@
 html,
 body {
   margin: 0;
+  height: 100%;
   background:
     radial-gradient(circle at top right, rgba(52, 211, 153, 0.18), transparent 30%),
     radial-gradient(circle at top left, rgba(245, 158, 11, 0.14), transparent 28%),
@@ -32,6 +33,11 @@ body {
 body.popup-page {
   min-width: 420px;
   min-height: 640px;
+  height: 100vh;
+  max-height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior: contain;
 }
 
 body.full-page {
@@ -59,6 +65,10 @@ pre {
   min-height: 100%;
 }
 
+body.popup-page #app {
+  height: 100%;
+}
+
 .app-shell {
   display: flex;
   flex-direction: column;
@@ -68,6 +78,7 @@ pre {
 
 .popup-shell {
   max-width: 460px;
+  min-height: 100%;
 }
 
 .full-shell {
