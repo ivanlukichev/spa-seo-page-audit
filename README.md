@@ -50,59 +50,29 @@ Good on-page SEO helps pages:
 
 The public store links will appear here after approval.
 
-For now, the install cards open the corresponding browser build folder in this repository.
-
 <table>
   <tr>
     <td width="33%" valign="top">
       <strong>Chrome</strong><br /><br />
       Chrome Web Store link will appear here after approval.<br /><br />
-      <a href="./extension/chrome">
-        <table>
-          <tr>
-            <td><code>ADD TO CHROME</code></td>
-            <td><strong>COMING SOON</strong></td>
-          </tr>
-        </table>
-      </a>
+      <strong>COMING SOON</strong>
     </td>
     <td width="33%" valign="top">
       <strong>Opera</strong><br /><br />
       Opera Add-ons link will appear here after approval.<br /><br />
-      <a href="./extension/opera">
-        <table>
-          <tr>
-            <td><code>ADD TO OPERA</code></td>
-            <td><strong>COMING SOON</strong></td>
-          </tr>
-        </table>
-      </a>
+      <strong>COMING SOON</strong>
     </td>
     <td width="33%" valign="top">
       <strong>Firefox</strong><br /><br />
       Firefox Add-ons link will appear here after approval.<br /><br />
-      <a href="./extension/firefox">
-        <table>
-          <tr>
-            <td><code>ADD TO FIREFOX</code></td>
-            <td><strong>COMING SOON</strong></td>
-          </tr>
-        </table>
-      </a>
+      <strong>COMING SOON</strong>
     </td>
   </tr>
   <tr>
     <td width="33%" valign="top">
       <strong>Edge</strong><br /><br />
       Microsoft Edge Add-ons link will appear here after approval.<br /><br />
-      <a href="./extension/edge">
-        <table>
-          <tr>
-            <td><code>ADD TO EDGE</code></td>
-            <td><strong>COMING SOON</strong></td>
-          </tr>
-        </table>
-      </a>
+      <strong>COMING SOON</strong>
     </td>
     <td width="33%" valign="top"></td>
     <td width="33%" valign="top"></td>
