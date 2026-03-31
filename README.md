@@ -74,7 +74,11 @@ The public store links will appear here after approval.
       Microsoft Edge Add-ons link will appear here after approval.<br /><br />
       <strong>COMING SOON</strong>
     </td>
-    <td width="33%" valign="top"></td>
+    <td width="33%" valign="top">
+      <strong>Safari</strong><br /><br />
+      App Store link for the Safari version will appear here after approval.<br /><br />
+      <strong>COMING SOON</strong>
+    </td>
     <td width="33%" valign="top"></td>
   </tr>
 </table>
@@ -85,6 +89,7 @@ Future store URLs:
 - Microsoft Edge Add-ons: coming soon
 - Opera Add-ons: coming soon
 - Firefox Add-ons: coming soon
+- App Store (Safari): coming soon
 
 ## Repository Contents
 
@@ -96,6 +101,7 @@ This repository contains browser-ready extension builds.
 - [extension/edge](./extension/edge)
 - [extension/opera](./extension/opera)
 - [extension/firefox](./extension/firefox)
+- [extension/safari](./extension/safari)
 - [PRIVACY.md](./PRIVACY.md)
 - [LICENSE](./LICENSE)
 
