@@ -55,24 +55,44 @@ The public store links will appear here after approval.
     <td width="33%" valign="top">
       <strong>Chrome</strong><br /><br />
       Chrome Web Store link will appear here after approval.<br /><br />
-      <img alt="Add to Chrome coming soon" src="https://img.shields.io/badge/Add_to_Chrome-Coming_soon-4f7ee8?style=for-the-badge" />
+      <table>
+        <tr>
+          <td><code>ADD TO CHROME</code></td>
+          <td><strong>COMING SOON</strong></td>
+        </tr>
+      </table>
     </td>
     <td width="33%" valign="top">
       <strong>Opera</strong><br /><br />
       Opera Add-ons link will appear here after approval.<br /><br />
-      <img alt="Add to Opera coming soon" src="https://img.shields.io/badge/Add_to_Opera-Coming_soon-e5e7eb?style=for-the-badge&labelColor=f8fafc&color=f8fafc&logoColor=1f2937" />
+      <table>
+        <tr>
+          <td><code>ADD TO OPERA</code></td>
+          <td><strong>COMING SOON</strong></td>
+        </tr>
+      </table>
     </td>
     <td width="33%" valign="top">
       <strong>Firefox</strong><br /><br />
       Firefox Add-ons link will appear here after approval.<br /><br />
-      <img alt="Add to Firefox coming soon" src="https://img.shields.io/badge/Add_to_Firefox-Coming_soon-4f7ee8?style=for-the-badge" />
+      <table>
+        <tr>
+          <td><code>ADD TO FIREFOX</code></td>
+          <td><strong>COMING SOON</strong></td>
+        </tr>
+      </table>
     </td>
   </tr>
   <tr>
     <td width="33%" valign="top">
       <strong>Edge</strong><br /><br />
       Microsoft Edge Add-ons link will appear here after approval.<br /><br />
-      <img alt="Add to Edge coming soon" src="https://img.shields.io/badge/Add_to_Edge-Coming_soon-e5e7eb?style=for-the-badge&labelColor=f8fafc&color=f8fafc&logoColor=1f2937" />
+      <table>
+        <tr>
+          <td><code>ADD TO EDGE</code></td>
+          <td><strong>COMING SOON</strong></td>
+        </tr>
+      </table>
     </td>
     <td width="33%" valign="top"></td>
     <td width="33%" valign="top"></td>
