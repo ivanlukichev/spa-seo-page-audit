@@ -64,8 +64,8 @@ The public store links will appear here after approval.
     </td>
     <td width="33%" valign="top">
       <strong>Firefox</strong><br /><br />
-      Firefox Add-ons link will appear here after approval.<br /><br />
-      <strong>COMING SOON</strong>
+      Available now on Firefox Add-ons.<br /><br />
+      <a href="https://addons.mozilla.org/addon/spa-seo-page-audit/"><strong>INSTALL ON FIREFOX</strong></a>
     </td>
   </tr>
   <tr>
@@ -88,7 +88,7 @@ Future store URLs:
 - Chrome Web Store: coming soon
 - Microsoft Edge Add-ons: coming soon
 - Opera Add-ons: coming soon
-- Firefox Add-ons: coming soon
+- Firefox Add-ons: https://addons.mozilla.org/addon/spa-seo-page-audit/
 - App Store (Safari): coming soon
 
 ## Repository Contents
