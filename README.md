@@ -71,8 +71,8 @@ The public store links will appear here after approval.
   <tr>
     <td width="33%" valign="top">
       <strong>Edge</strong><br /><br />
-      Microsoft Edge Add-ons link will appear here after approval.<br /><br />
-      <strong>COMING SOON</strong>
+      Available now on Microsoft Edge Add-ons.<br /><br />
+      <a href="https://microsoftedge.microsoft.com/addons/detail/spa-seo-page-audit/lmdjbkcamdkglaglcenebbbnfdempkpl"><strong>INSTALL ON EDGE</strong></a>
     </td>
     <td width="33%" valign="top">
       <strong>Safari</strong><br /><br />
@@ -86,7 +86,7 @@ The public store links will appear here after approval.
 Future store URLs:
 
 - Chrome Web Store: coming soon
-- Microsoft Edge Add-ons: coming soon
+- Microsoft Edge Add-ons: https://microsoftedge.microsoft.com/addons/detail/spa-seo-page-audit/lmdjbkcamdkglaglcenebbbnfdempkpl
 - Opera Add-ons: coming soon
 - Firefox Add-ons: https://addons.mozilla.org/addon/spa-seo-page-audit/
 - App Store (Safari): coming soon
