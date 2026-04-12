@@ -54,8 +54,8 @@ The public store links will appear here after approval.
   <tr>
     <td width="33%" valign="top">
       <strong>Chrome</strong><br /><br />
-      Chrome Web Store link will appear here after approval.<br /><br />
-      <strong>COMING SOON</strong>
+      Available now on Chrome Web Store.<br /><br />
+      <a href="https://chromewebstore.google.com/detail/spa-seo-page-audit/ffbgloopnhnncmiccneaacfmekihccff"><strong>INSTALL ON CHROME</strong></a>
     </td>
     <td width="33%" valign="top">
       <strong>Opera</strong><br /><br />
@@ -85,7 +85,7 @@ The public store links will appear here after approval.
 
 Future store URLs:
 
-- Chrome Web Store: coming soon
+- Chrome Web Store: https://chromewebstore.google.com/detail/spa-seo-page-audit/ffbgloopnhnncmiccneaacfmekihccff
 - Microsoft Edge Add-ons: https://microsoftedge.microsoft.com/addons/detail/spa-seo-page-audit/lmdjbkcamdkglaglcenebbbnfdempkpl
 - Opera Add-ons: coming soon
 - Firefox Add-ons: https://addons.mozilla.org/addon/spa-seo-page-audit/
